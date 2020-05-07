@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/github/dzmitryd07/js-assignments.svg?branch=master)](https://travis-ci.com/github/dzmitryd07/js-assignments)
+[![Build Status](https://api.travis-ci.com/dzmitryd07/js-assignments.svg?branch=master)](https://travis-ci.com/github/dzmitryd07/js-assignments)
 ![Hackage-Deps](https://img.shields.io/hackage-deps/v/lens.svg)
 [![Greenkeeper badge](https://badges.greenkeeper.io/dzmitryd07/js-assignments.svg)](https://greenkeeper.io/)
 [![GitHub release](https://img.shields.io/github/release/dzmitryd07/js-assignments.svg)](https://github.com/dzmitryd07/js-assignments/releases/latest)
