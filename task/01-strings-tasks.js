@@ -199,8 +199,8 @@ function extractEmails(str) {
  */
 function getRectangleString(width, height) {
   return '┌' + '─'.repeat(width - 2) + '┐' + '\n' +
-    +('│' + ' '.repeat(width - 2) + '│' + '\n').repeat(height - 2) +
-    +'└' + '─'.repeat(width - 2) + '┘' + '\n';
+    ('│' + ' '.repeat(width - 2) + '│' + '\n').repeat(height - 2) +
+    '└' + '─'.repeat(width - 2) + '┘' + '\n';
 }
 
 
@@ -270,8 +270,8 @@ function isString(value) {
  */
 function getCardId(value) {
   return ['A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣', 'A♦', '2♦', '3♦', '4♦', '5♦',
-    '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦', 'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥',
-    'Q♥', 'K♥', 'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠'].indexOf(value, 0);
+    '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦', 'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥',
+    'J♥', 'Q♥', 'K♥', 'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠'].indexOf(value, 0);
 }
 
 module.exports = {
