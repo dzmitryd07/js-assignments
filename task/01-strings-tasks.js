@@ -51,7 +51,7 @@ function getStringLength(value) {
  *   'Chuck','Norris'  => 'Hello, Chuck Norris!'
  */
 function getStringFromTemplate(firstName, lastName) {
-  return (`Hello, ${firstName} ${lastName}!`);
+  return `Hello, ${firstName} ${lastName}!`;
 }
 
 /**
@@ -95,7 +95,7 @@ function getFirstChar(value) {
  *   '\tHello, World! ' => 'Hello, World!'
  */
 function removeLeadingAndTrailingWhitespaces(value) {
-  return value.trim('');
+  return value.trim();
 }
 
 /**
@@ -141,7 +141,7 @@ function removeFirstOccurrences(str, value) {
  *   '<a>' => 'a'
  */
 function unbracketTag(str) {
-  return str.replace(/<(\w+)>/, '$1');
+  return str.replace(/[<>]/g, ''); //no regex
 }
 
 
@@ -198,7 +198,7 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  throw new Error('Not implemented');
+  return '┌' + '─'.repeat(width - 2) + '┐' + '\n' + ('│' + ' '.repeat(width - 2) + '│' + '\n').repeat(height - 2) + '└' + '─'.repeat(width - 2) + '┘' + '\n';
 }
 
 
@@ -219,7 +219,9 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-  throw new Error('Not implemented');
+  return str.replace(/[A-Z]/gi, c =>
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'[
+      'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'.indexOf(c)]);
 }
 
 /**
@@ -265,7 +267,9 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-  throw new Error('Not implemented');
+  return ['A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣', 'A♦', '2♦', '3♦', '4♦', '5♦',
+    '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦', 'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥',
+    'Q♥', 'K♥', 'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠'].indexOf(value, 0);
 }
 
 module.exports = {
